@@ -11,7 +11,7 @@ const Header = () => {
           <li><a href="#about">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#contact">Connect</a></li>
         </ul>
       </nav>
     </header>
@@ -21,6 +21,7 @@ const Header = () => {
 const Hero = () => {
   return (
     <section id="hero" className="hero">
+      <img src="images/profile/animated-profile1.png" alt="Your Profile Picture" className="hero-profile-image" />
       <div className="hero-content">
         <h2>Hi, I'm Gustavo Cruz</h2>
         <p>A passionate AI Developer</p>
@@ -29,6 +30,7 @@ const Hero = () => {
     </section>
   );
 };
+
 
 const About = () => {
   return (
@@ -65,42 +67,48 @@ const Projects = () => {
   return (
     <section id="projects" className="projects">
       <h2>Projects</h2>
+
       <div className="project-grid">
         <div className="project-card">
-          <img src="path/to/project1.jpg" alt="Project 1" className="project-image" />
-          <h3>Project Title 1</h3>
-          <p>Brief description of project 1.</p>
-          <a href="#">View Project</a>
+          <img src="images/projects/ticket-gen.png" alt="Ticket-Generator" className="project-image" />
+          <h3>Ticket-Generator</h3>
+          <p>FrontEnd to generate tickets for a fictional event</p>
+          <a href="https://ticket-generator-bice-seven.vercel.app/">View Project</a>
         </div>
+
         <div className="project-card">
-          <img src="path/to/project2.jpg" alt="Project 2" className="project-image" />
-          <h3>Project Title 2</h3>
-          <p>Brief description of project 2.</p>
-          <a href="#">View Project</a>
+          <img src="images/projects/age-calc.png" alt="Age Calculator" className="project-image" />
+          <h3>Age Calculator</h3>
+          <p>A simple calculator for the age on people and objects</p>
+          <a href="age-calculator-seven-eta.vercel.app">View Project</a>
         </div>
+
         <div className="project-card">
-          <img src="path/to/project3.jpg" alt="Project 3" className="project-image" />
-          <h3>Project Title 3</h3>
-          <p>Brief description of project 3.</p>
-          <a href="#">View Project</a>
+          <img src="images/projects/fire-smoke-detection.png" alt="Fire Detection" className="project-image" />
+          <h3>Fire and Smoke Detection</h3>
+          <p>Development of a vision model to detect Wildfires and smoke.</p>
+          <a href="https://colab.research.google.com/drive/1qPuXxn8GF00BnuCGLLSaDNBmPIhvRV6q?usp=sharing">View Project</a>
         </div>
+
         <div className="project-card">
-          <img src="path/to/project4.jpg" alt="Project 4" className="project-image" />
-          <h3>Project Title 4</h3>
-          <p>Brief description of project 4.</p>
-          <a href="#">View Project</a>
+          <img src="images/projects/3d-digits.png" alt="3D Digits Generator" className="project-image" />
+          <h3>3D Digits Generator</h3>
+          <p>Training of an Autoencoder AI to generate 3D Digits</p>
+          <a href="https://colab.research.google.com/drive/1clZLIQvfyXJrKMXTSLuJUzDMFB-Btyl6?usp=sharing">View Project</a>
         </div>
+
         <div className="project-card">
-          <img src="path/to/project5.jpg" alt="Project 5" className="project-image" />
-          <h3>Project Title 5</h3>
-          <p>Brief description of project 5.</p>
-          <a href="#">View Project</a>
+          <img src="images/projects/MergeSort.png" alt="Merge Sort Animation" className="project-image" />
+          <h3>Merge Sort Animation</h3>
+          <p>Python animation to illustrate the merge sort algorithm</p>
+          <a href="https://github.com/Gustavo-Cruzz/SortingAlgos">View Project</a>
         </div>
+
         <div className="project-card">
-          <img src="path/to/project6.jpg" alt="Project 6" className="project-image" />
-          <h3>Project Title 6</h3>
-          <p>Brief description of project 6.</p>
-          <a href="#">View Project</a>
+          <img src="images/projects/CDIA.png" alt="Deep Learning Study Path" className="project-image" />
+          <h3>Deep Learning Study Path</h3>
+          <p>Step by step study path for Deep Learning</p>
+          <a href="https://quilled-scion-18d.notion.site/Capacita-o-Ci-ncia-de-Dados-IA-9f713b97a780412ba0d5408f6d45651f?pvs=4">View Project</a>
         </div>
       </div>
     </section>
@@ -112,17 +120,17 @@ const Contact = () => {
     <section id="contact" className="contact">
       <h2>Connect With Me</h2>
       <div className="contact-icons">
-        <a href="www.linkedin.com/in/gorcruz" target="_blank" rel="noopener noreferrer">
-          <img src="images/logos/linkedin-logo.png" width="36" height="29" alt="LinkedIn      " />
-        </a>
+        <a href="http://www.linkedin.com/in/gorcruz" target="_blank" rel="noopener noreferrer">
+          <img src="/images/logos/linkedin logo.png" width="36" height="36" alt="LinkedIn         " />
+        </a> 
         
-        <a href="http://lattes.cnpq.br/your-lattes-id" target="_blank" rel="noopener noreferrer">
-          <img src="images/logos/lattescnqp.png" width="36" height="29" alt="Lattes CNPQ      " />
+        <a href="http://lattes.cnpq.br/3562852034903040" target="_blank" rel="noopener noreferrer">
+          <img src="images/logos/lattescnqp.png" width="42" height="36" alt="Lattes CNPQ         " />
         </a>
 
         <a href="https://github.com/Gustavo-Cruzz" target="_blank" rel="noopener noreferrer">
-          <img src="images/logos/github-mark-white.png" width="36" height="29" alt="GitHub      " />
-        </a>
+          <img src="images/logos/github-mark.svg" width="36" height="36" alt="GitHub         " />
+        </a>  
 
         {/* <a href="https://www.goodreads.com/user/show/your-goodreads-id" target="_blank" rel="noopener noreferrer">
           <img src="placeholder_goodreads_logo.png" alt="Goodreads" />
