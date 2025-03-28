@@ -1,9 +1,11 @@
+/* General improvements for better readability and spacing */
 body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #f6f8fa; /* GitHub's light gray background */
+  color: #24292e; /* GitHub's dark gray text */
+  line-height: 1.6; /* Improved line height for readability */
 }
 
 .app {
@@ -13,16 +15,18 @@ body {
 }
 
 header {
-  background-color: #333;
-  color: white;
-  padding: 1rem 2rem;
+  background-color: #24292e; /* GitHub's dark gray header */
+  color: #fff; /* White text on dark header */
+  padding: 1.5rem 2rem; /* Slightly more padding */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04); /* Subtle bottom shadow */
 }
 
 header h1 {
   margin: 0;
+  font-size: 1.75rem; /* Slightly smaller, more refined */
 }
 
 header nav ul {
@@ -33,60 +37,92 @@ header nav ul {
 }
 
 header nav ul li {
-  margin-left: 1rem;
+  margin-left: 1.5rem; /* More spacing between nav items */
 }
 
 header nav ul li a {
-  color: white;
+  color: #fff; /* White links in header */
   text-decoration: none;
+  font-weight: 500; /* Slightly bolder for better emphasis */
 }
 
 /* Hero section styles */
 .hero {
-  background-color: #eee;
-  padding: 4rem 2rem;
+  background-color: #fff; /* White background for hero */
+  padding: 5rem 2rem; /* More vertical padding */
   text-align: center;
 }
 
 .hero-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 3rem; /* Larger, more impactful heading */
+  margin-bottom: 1.5rem;
+  color: #24292e; /* Dark gray text */
+  font-weight: 700; /* Bolder heading */
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
+  font-size: 1.25rem; /* Slightly larger paragraph text */
+  margin-bottom: 2.5rem;
+  color: #586069; /* Slightly lighter gray text */
+  max-width: 800px; /* Limit width for better readability on larger screens */
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hero-content button {
-  padding: 0.75rem 1.5rem;
-  background-color: #333;
+  padding: 1rem 2rem; /* Larger button */
+  background-color: #28a745; /* GitHub's primary green button */
   color: white;
   border: none;
+  border-radius: 6px; /* Rounded corners for the button */
   cursor: pointer;
+  font-size: 1.1rem; /* Slightly larger button text */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.hero-content button:hover {
+  background-color: #22863a; /* Darker green on hover */
 }
 
 /* About section styles */
 .about {
-  padding: 3rem 2rem;
-  text-align: justify;
+  padding: 4rem 2rem; /* More vertical padding */
+  text-align: center; 
+  background-color: #fff; /* Ensure consistent background */
 }
 
 .about h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.25rem; /* Slightly larger heading */
+  margin-bottom: 1.25rem;
+  color: #24292e; /* Dark gray text */
+  font-weight: 600;
+  border-bottom: 2px solid #e1e4e8; /* Subtle bottom border for visual separation */
+  padding-bottom: 0.5rem;
+  
+}
+
+.about p {
+  margin-bottom: 1.5rem;
+  margin-left: 3.5em;
+  color: #586069;
+  text-align: center;
+  max-width: 100em; /* Limit width for better readability */
 }
 
 /* Skills section styles */
 .skills {
-  padding: 3rem 2rem;
-  background-color: #ddd;
+  padding: 4rem 2rem; /* More vertical padding */
+  background-color: #f6f8fa; /* Light gray background */
 }
 
 .skills h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.25rem; /* Slightly larger heading */
+  margin-bottom: 1.25rem;
   text-align: center;
+  color: #24292e; /* Dark gray text */
+  font-weight: 600;
+  border-bottom: 2px solid #e1e4e8; /* Subtle bottom border */
+  padding-bottom: 0.5rem;
 }
 
 .skills ul {
@@ -95,93 +131,213 @@ header nav ul li a {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem; /* Spacing between skill tags */
+  margin-top: 1.5rem;
 }
 
 .skills ul li {
-  background-color: #eee;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  border-radius: 5px;
+  background-color: #e0f2f7; /* Light blue for skill tags */
+  color: #0d47a1; /* Dark blue text on light blue */
+  padding: 0.75rem 1.25rem; /* Slightly more padding */
+  margin: 0; /* Remove default list item margin */
+  border-radius: 6px; /* Rounded corners for tags */
+  border: 1px solid #b3e5fc; /* Slightly darker blue border */
+  font-size: 1rem; /* Slightly larger text */
 }
 
 /* Projects section styles */
 .projects {
-  padding: 3rem 2rem;
+  padding: 4rem 2rem; /* More vertical padding */
+  background-color: #fff; /* Consistent white background */
 }
 
 .projects h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.25rem; /* Slightly larger heading */
+  margin-bottom: 1.25rem;
   text-align: center;
+  color: #24292e; /* Dark gray text */
+  font-weight: 600;
+  border-bottom: 2px solid #e1e4e8; /* Subtle bottom border */
+  padding-bottom: 0.5rem;
 }
 
 .project-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Adjust minmax for different breakpoints */
   gap: 2rem;
   margin-top: 2rem;
 }
 
 .project-card {
-  background-color: white;
-  padding: 1.5rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #bbdefb; /* Slightly darker blue for project cards */
+  padding: 2rem; /* More padding inside the card */
+  border-radius: 8px; /* More rounded corners */
+  box-shadow: 0 2px 6px rgba(27, 31, 35, 0.1); /* More noticeable shadow */
+  border: 1px solid #64b5f6; /* Darker blue border for cards */
+  transition: transform 0.2s ease-in-out; /* Subtle hover animation */
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  transform: translateY(-0.5rem); /* Slight lift on hover */
+}
+
+.project-image {
+  width: 100%; /* Make the image fill the width of the card */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 6px; /* Optional: round the image corners */
+  margin-bottom: 1rem; /* Add some space between the image and text */
+  object-fit: cover; /* Ensure the image covers the area without distortion */
 }
 
 .project-card h3 {
   margin-top: 0;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+  color: #1565c0; /* Even darker blue for headings */
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .project-card p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
+  color: #1e88e5; /* Slightly lighter blue for paragraphs */
 }
 
 .project-card a {
-  color: #007bff;
+  color: #0366d6; /* GitHub's primary blue link color */
   text-decoration: none;
+  font-weight: 500;
+}
+
+.project-card a:hover {
+  text-decoration: underline; /* Add underline on hover for links */
 }
 
 /* Contact section styles */
 .contact {
-  padding: 3rem 2rem;
-  background-color: #eee;
+  padding: 4rem 2rem; /* More vertical padding */
+  background-color: #f6f8fa; /* Light gray background */
   text-align: center;
 }
 
 .contact h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+  font-size: 2.25rem; /* Slightly larger heading */
+  margin-bottom: 1.25rem;
+  color: #24292e; /* Dark gray text */
+  font-weight: 600;
+  border-bottom: 2px solid #e1e4e8; /* Subtle bottom border */
+  padding-bottom: 0.5rem;
 }
 
 .contact form {
-  max-width: 500px;
+  max-width: 600px; /* Slightly wider form */
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem; /* More spacing between form elements */
+  margin-top: 1.5rem;
 }
 
 .contact form input,
 .contact form textarea {
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 1rem; /* More padding for input fields */
+  border: 1px solid #d1d5da; /* Light gray border for form elements */
+  border-radius: 6px; /* Rounded corners for form elements */
+  color: #24292e; /* Dark gray text */
+  background-color: #fff; /* White background for form elements */
+  font-size: 1rem;
+}
+
+.contact form textarea {
+  min-height: 150px; /* Slightly taller textarea */
 }
 
 .contact form button {
-  padding: 0.75rem 1.5rem;
-  background-color: #333;
+  padding: 1rem 2rem; /* Larger button */
+  background-color: #28a745; /* GitHub's primary green button */
   color: white;
   border: none;
+  border-radius: 6px; /* Rounded corners for the button */
   cursor: pointer;
+  font-size: 1.1rem; /* Slightly larger button text */
+  transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+.contact form button:hover {
+  background-color: #22863a; /* Darker green on hover */
 }
 
 /* Footer styles */
 footer {
-  background-color: #333;
-  color: white;
+  background-color: #24292e; /* GitHub's dark gray footer */
+  color: #fff; /* White text in footer */
   text-align: center;
-  padding: 1rem;
+  padding: 1.5rem; /* More padding for the footer */
+  font-size: 0.9rem; /* Slightly smaller footer text */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For smaller tablets and larger phones */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav {
+    margin-top: 1rem;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav ul li {
+    margin-left: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .project-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Adjust minmax for smaller screens */
+  }
+}
+
+/* For smaller screens (phones) */
+@media (max-width: 576px) {
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .skills ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills ul li {
+    width: 80%;
+    text-align: center;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr; /* Single column on smaller screens */
+  }
+
+  .contact form {
+    max-width: 100%;
+  }
 }

@@ -5,7 +5,7 @@ import './App.css'; // Import the CSS for this component
 const Header = () => {
   return (
     <header>
-      <h1>Your Name</h1>
+      <h1>Gustavo Cruz</h1>
       <nav>
         <ul>
           <li><a href="#about">About</a></li>
@@ -48,12 +48,14 @@ const Skills = () => {
       <h2>Skills</h2>
       <ul>
         <li>Python</li>
-        <li>Machine Learning</li>
         <li>Deep Learning</li>
-        <li>Natural Language Processing</li>
-        <li>Placeholder Skill 5</li>
-        <li>Placeholder Skill 5</li>
-        <li>Placeholder Skill 5</li>
+        <li>NLP</li>
+        <li>JavaScript</li>
+        <li>Tensorflow</li>
+        <li>Pytorch</li>
+        <li>HuggingFace</li>
+        <li>SQL</li>
+        <li>React</li>
       </ul>
     </section>
   );
@@ -65,16 +67,41 @@ const Projects = () => {
       <h2>Projects</h2>
       <div className="project-grid">
         <div className="project-card">
+          <img src="path/to/project1.jpg" alt="Project 1" className="project-image" />
           <h3>Project Title 1</h3>
           <p>Brief description of project 1.</p>
           <a href="#">View Project</a>
         </div>
         <div className="project-card">
+          <img src="path/to/project2.jpg" alt="Project 2" className="project-image" />
           <h3>Project Title 2</h3>
           <p>Brief description of project 2.</p>
           <a href="#">View Project</a>
         </div>
-        {/* Add more project cards here */}
+        <div className="project-card">
+          <img src="path/to/project3.jpg" alt="Project 3" className="project-image" />
+          <h3>Project Title 3</h3>
+          <p>Brief description of project 3.</p>
+          <a href="#">View Project</a>
+        </div>
+        <div className="project-card">
+          <img src="path/to/project4.jpg" alt="Project 4" className="project-image" />
+          <h3>Project Title 4</h3>
+          <p>Brief description of project 4.</p>
+          <a href="#">View Project</a>
+        </div>
+        <div className="project-card">
+          <img src="path/to/project5.jpg" alt="Project 5" className="project-image" />
+          <h3>Project Title 5</h3>
+          <p>Brief description of project 5.</p>
+          <a href="#">View Project</a>
+        </div>
+        <div className="project-card">
+          <img src="path/to/project6.jpg" alt="Project 6" className="project-image" />
+          <h3>Project Title 6</h3>
+          <p>Brief description of project 6.</p>
+          <a href="#">View Project</a>
+        </div>
       </div>
     </section>
   );
@@ -85,21 +112,21 @@ const Contact = () => {
     <section id="contact" className="contact">
       <h2>Connect With Me</h2>
       <div className="contact-icons">
-        <a href="https://www.linkedin.com/in/your-linkedin-profile/" target="_blank" rel="noopener noreferrer">
-          <img src="placeholder_linkedin_logo.png" alt="LinkedIn" />
+        <a href="www.linkedin.com/in/gorcruz" target="_blank" rel="noopener noreferrer">
+          <img src="images/logos/linkedin-logo.png" width="36" height="29" alt="LinkedIn      " />
         </a>
-
+        
         <a href="http://lattes.cnpq.br/your-lattes-id" target="_blank" rel="noopener noreferrer">
-          <img src="placeholder_lattes_logo.png" alt="Lattes CNPQ" />
+          <img src="images/logos/lattescnqp.png" width="36" height="29" alt="Lattes CNPQ      " />
         </a>
 
-        <a href="https://github.com/your-github-username" target="_blank" rel="noopener noreferrer">
-          <img src="placeholder_github_logo.png" alt="GitHub" />
+        <a href="https://github.com/Gustavo-Cruzz" target="_blank" rel="noopener noreferrer">
+          <img src="images/logos/github-mark-white.png" width="36" height="29" alt="GitHub      " />
         </a>
 
-        <a href="https://www.goodreads.com/user/show/your-goodreads-id" target="_blank" rel="noopener noreferrer">
+        {/* <a href="https://www.goodreads.com/user/show/your-goodreads-id" target="_blank" rel="noopener noreferrer">
           <img src="placeholder_goodreads_logo.png" alt="Goodreads" />
-        </a>
+        </a> */}
         
       </div>
       <p>Feel free to connect!</p>
