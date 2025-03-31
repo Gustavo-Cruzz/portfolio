@@ -84,6 +84,13 @@ const Projects = () => {
         </div>
 
         <div className="project-card">
+          <img src="images/projects/RPGen.jpg" alt="RPGen" className="project-image" />
+          <h3>Age Calculator</h3>
+          <p>RPG character generator for D&D Parties</p>
+          <a href="age-calculator-seven-eta.vercel.app">View Project</a>
+        </div>
+    
+        <div className="project-card">
           <img src="images/projects/fire-smoke-detection.png" alt="Fire Detection" className="project-image" />
           <h3>Fire and Smoke Detection</h3>
           <p>Development of a vision model to detect Wildfires and smoke.</p>
