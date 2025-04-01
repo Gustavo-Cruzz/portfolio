@@ -21,11 +21,11 @@ const Header = () => {
 const Hero = () => {
   return (
     <section id="hero" className="hero">
-      <img src="images/profile/animated-profile1.png" alt="Your Profile Picture" className="hero-profile-image" />
+      <img src="images/profile/profile.jpg" alt="Profile Picture" className="hero-profile-image" />
       <div className="hero-content">
         <h2>Hi, I'm Gustavo Cruz</h2>
         <p>A passionate AI Developer</p>
-        <button>View My Projects</button>
+        {/* <button>View My Projects</button> */}
       </div>
     </section>
   );
@@ -59,6 +59,99 @@ const Skills = () => {
         <li>SQL</li>
         <li>React</li>
       </ul>
+      <ul>        
+        <li style={{ backgroundColor: '#fce4ec', color: '#880e4f', borderColor: '#f8bbd0' }}>Communication</li> 
+        <li style={{ backgroundColor: '#fce4ec', color: '#880e4f', borderColor: '#f8bbd0' }}>Teamwork</li>
+        <li style={{ backgroundColor: '#fce4ec', color: '#880e4f', borderColor: '#f8bbd0' }}>Problem Solving</li>
+        <li style={{ backgroundColor: '#fce4ec', color: '#880e4f', borderColor: '#f8bbd0' }}>Leadership</li> 
+        <li style={{ backgroundColor: '#fce4ec', color: '#880e4f', borderColor: '#f8bbd0' }}>Teaching</li> 
+        </ul>
+    </section>
+    
+  );
+};
+
+const Experience = () => {
+  const experiences = [
+    {
+      company: "Senai CIMATEC",
+      position: "R&D Data Science and AI",
+      startDate: "Jan 2021",
+      endDate: "Jan 2023",
+      description:
+        "Developed a methodology to identify bias and unfairness in AI classification systems and mitigate their harm when dealing with sensitive attributes",
+      // imageUrl: "images/experience/tech-solutions.png", 
+      // link: "https://dataanalytics.example.com", 
+      technologies: ["Python", "Tensorflow", "Torch", "MySQL"],
+    },
+    {
+      company: "Senai CIMATEC",
+      position: "R&D LLM Developer",
+      startDate: "Jan 2023",
+      endDate: "Dec 2024",
+      description:
+        "Developed a pipeline to prepare and evaluate LLMs using real world data combined with Fine-Tuning, RAG and Quantization",
+      // imageUrl: "images/experience/data-analytics.png", 
+      // link: "https://dataanalytics.example.com", 
+      technologies: ["Python", "SQL", "HuggingFace", "Docker", "MLFlow"],
+    },
+    {
+      company: "Senai CIMATEC",
+      position: "R&D LLM Developer",
+      startDate: "Jan 2025",
+      endDate: "Apr 2025",
+      description:
+        "Developed a Multi-model application to chat with a user while generating images",
+      // imageUrl: "images/experience/data-analytics.png", 
+      // link: "https://dataanalytics.example.com", 
+      technologies: ["Python", "HuggingFace", "StableDiffusion", "Docker"],
+    },
+    {
+      company: "Senai CIMATEC",
+      position: "Data Cientist Intern",
+      startDate: "Apr 2025",
+      endDate: "Present",
+      description:
+        "Starts soon",
+      // imageUrl: "images/experience/data-analytics.png", 
+      // link: "https://dataanalytics.example.com", 
+      technologies: ["Python", "SQL", "Pandas", "Matplotlib"],
+    },
+  
+  ];
+
+  return (
+    <section id="experience" className="experience">
+      <h2>Work Experience</h2>
+
+      <div className="experience-grid">
+        {experiences.map((experience, index) => (
+          <div className="experience-card" key={index}>
+            <img
+              src={experience.imageUrl}
+              alt={experience.company}
+              className="experience-image"
+            />
+            <h3>{experience.company}</h3>
+            <h4>{experience.position}</h4>
+            <p>
+              {experience.startDate} - {experience.endDate}
+            </p>
+            <p>{experience.description}</p>
+            {/* <a href={experience.link}>View Details</a> */}
+            <div className="technologies-container">
+              <h3>Technologies Used</h3>
+              <div className="technology-buttons">
+                {experience.technologies.map((tech, techIndex) => (
+                  <span key={techIndex} className="technology-button">
+                    {tech}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </section>
   );
 };
@@ -80,6 +173,13 @@ const Projects = () => {
           <img src="images/projects/age-calc.png" alt="Age Calculator" className="project-image" />
           <h3>Age Calculator</h3>
           <p>A simple calculator for the age on people and objects</p>
+          <a href="age-calculator-seven-eta.vercel.app">View Project</a>
+        </div>
+
+        <div className="project-card">
+          <img src="images/projects/RPGen.jpg" alt="RPGen" className="project-image" />
+          <h3>Age Calculator</h3>
+          <p>RPG character generator for D&D Parties</p>
           <a href="age-calculator-seven-eta.vercel.app">View Project</a>
         </div>
 
@@ -158,6 +258,7 @@ function App() {
       <Hero />
       <About />
       <Skills />
+      <Experience />
       <Projects />
       <Contact />
       <Footer />
