@@ -257,6 +257,24 @@ const Footer = () => {
 
 // Main App component
 function App() {
+  // State to manage the current theme
+  const [theme, setTheme] = useState('light');
+
+  // Function to toggle between 'light' and 'dark'
+  const toggleTheme = () => {
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    setTheme(newTheme);
+    localStorage.setItem('theme', newTheme); // Save theme choice
+  };
+
+  // Effect to set the theme on initial load from localStorage
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setTheme(savedTheme);
+    }
+  }, []);
+
   return (
     <div className="app">
       <Header />
