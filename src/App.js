@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css'; // Import the CSS for this component
 
-// Define functional components for different sections
-const Header = () => {
+// Add theme and toggleTheme props to the Header component
+const Header = ({ theme, toggleTheme }) => {
   return (
     <header>
       <h1>Gustavo Cruz</h1>
@@ -12,6 +12,11 @@ const Header = () => {
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
           <li><a href="#contact">Connect</a></li>
+          <li>
+            <button onClick={toggleTheme} className="theme-toggle-button">
+              {theme === 'light' ? 'Dark Mode' : 'Light Mode'}
+            </button>
+          </li>
         </ul>
       </nav>
     </header>

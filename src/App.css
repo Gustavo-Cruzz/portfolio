@@ -1,10 +1,70 @@
+/* App.css */
+
+/* 1. DEFINE COLOR PALETTES USING CSS VARIABLES */
+:root {
+  /* Light Mode Palette (Original Colors) */
+  --bg-color: #f6f8fa;
+  --bg-secondary-color: #ffffff;
+  --text-color: #24292e;
+  --text-secondary-color: #586069;
+  --header-bg-color: #24292e;
+  --header-text-color: #ffffff;
+  --border-color: #e1e4e8;
+  --card-bg-color: #bbdefb;
+  --card-border-color: #64b5f6;
+  --card-title-color: #1565c0;
+  --card-text-color: #1e88e5;
+  --link-color: #0366d6;
+  --button-bg-color: #28a745;
+  --button-text-color: #ffffff;
+  --button-hover-bg-color: #22863a;
+  --skill-bg-color: #e0f2f7;
+  --skill-text-color: #0d47a1;
+  --skill-border-color: #b3e5fc;
+  --experience-card-bg: #f0f0f0;
+  --tech-button-bg: #ffffff;
+  --tech-button-text: #007bff;
+  --tech-button-border: #007bff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  /* Dark Mode Palette (Dracula/Neon Style) */
+  --bg-color: #282a36; /* Dark purple-gray */
+  --bg-secondary-color: #44475a; /* Lighter gray for cards/sections */
+  --text-color: #f8f8f2; /* Off-white */
+  --text-secondary-color: #bd93f9; /* Light purple for subtitles */
+  --header-bg-color: #1e1f29; /* Even darker for header/footer */
+  --header-text-color: #f8f8f2;
+  --border-color: #6272a4; /* Muted purple-blue for borders */
+  --card-bg-color: #44475a; /* Same as secondary bg */
+  --card-border-color: #6272a4;
+  --card-title-color: #50fa7b; /* Bright green */
+  --card-text-color: #f8f8f2;
+  --link-color: #8be9fd; /* Bright cyan */
+  --button-bg-color: #ff79c6; /* Bright pink */
+  --button-text-color: #282a36;
+  --button-hover-bg-color: #ff92d0; /* Lighter pink on hover */
+  --skill-bg-color: #6272a4;
+  --skill-text-color: #f8f8f2;
+  --skill-border-color: #bd93f9;
+  --experience-card-bg: #282a36;
+  --tech-button-bg: #44475a;
+  --tech-button-text: #8be9fd;
+  --tech-button-border: #8be9fd;
+  --shadow-color: rgba(0, 0, 0, 0.3);
+}
+
+/* 2. REFACTOR EXISTING CSS TO USE VARIABLES */
+
 body {
   font-family: sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f6f8fa;
-  color: #24292e;
+  background-color: var(--bg-color);
+  color: var(--text-color);
   line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .app {
@@ -14,13 +74,14 @@ body {
 }
 
 header {
-  background-color: #24292e;
-  color: #fff;
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
   padding: 1.5rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 1px 0 rgba(27, 31, 35, 0.04);
+  transition: background-color 0.3s ease;
 }
 
 header h1 {
@@ -33,6 +94,7 @@ header nav ul {
   padding: 0;
   margin: 0;
   display: flex;
+  align-items: center; /* Align button vertically */
 }
 
 header nav ul li {
@@ -40,18 +102,36 @@ header nav ul li {
 }
 
 header nav ul li a {
-  color: #fff;
+  color: var(--header-text-color);
   text-decoration: none;
   font-weight: 500;
 }
 
+/* 3. ADD STYLES FOR THE NEW TOGGLE BUTTON */
+.theme-toggle-button {
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.theme-toggle-button:hover {
+  background-color: var(--button-hover-bg-color);
+}
+
+
 .hero {
-  background-color: #fff;
+  background-color: var(--bg-secondary-color);
   padding: 5rem 2rem;
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: background-color 0.3s ease;
 }
 
 .hero-profile-image {
@@ -60,20 +140,20 @@ header nav ul li a {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--shadow-color);
 }
 
 .hero-content h2 {
   font-size: 3rem;
   margin-bottom: 1.5rem;
-  color: #24292e;
+  color: var(--text-color);
   font-weight: 700;
 }
 
 .hero-content p {
   font-size: 1.25rem;
   margin-bottom: 2.5rem;
-  color: #586069;
+  color: var(--text-secondary-color);
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
@@ -81,8 +161,8 @@ header nav ul li a {
 
 .hero-content button {
   padding: 1rem 2rem;
-  background-color: #28a745;
-  color: white;
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
   border: none;
   border-radius: 6px;
   cursor: pointer;
@@ -91,7 +171,7 @@ header nav ul li a {
 }
 
 .hero-content button:hover {
-  background-color: #22863a;
+  background-color: var(--button-hover-bg-color);
 }
 
 @media (min-width: 769px) {
@@ -114,38 +194,40 @@ header nav ul li a {
 .about {
   padding: 4rem 2rem;
   text-align: center;
-  background-color: #fff;
+  background-color: var(--bg-secondary-color);
+  transition: background-color 0.3s ease;
 }
 
 .about h2 {
   font-size: 2.25rem;
   margin-bottom: 1.25rem;
-  color: #24292e;
+  color: var(--text-color);
   font-weight: 600;
-  border-bottom: 2px solid #e1e4e8;
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.5rem;
 }
 
 .about p {
   margin-bottom: 1.5rem;
   margin-left: 3.5em;
-  color: #586069;
+  color: var(--text-secondary-color);
   text-align: center;
   max-width: 100em;
 }
 
 .skills {
   padding: 4rem 2rem;
-  background-color: #f6f8fa;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
 }
 
 .skills h2 {
   font-size: 2.25rem;
   margin-bottom: 1.25rem;
   text-align: center;
-  color: #24292e;
+  color: var(--text-color);
   font-weight: 600;
-  border-bottom: 2px solid #e1e4e8;
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.5rem;
 }
 
@@ -160,23 +242,27 @@ header nav ul li a {
 }
 
 .skills ul li {
-  background-color: #e0f2f7;
-  color: #0d47a1;
+  background-color: var(--skill-bg-color);
+  color: var(--skill-text-color);
   padding: 0.75rem 1.25rem;
   margin: 0;
   border-radius: 6px;
-  border: 1px solid #b3e5fc;
+  border: 1px solid var(--skill-border-color);
   font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 .experience {
   padding: 4rem 2rem;
+  background-color: var(--bg-secondary-color);
+  transition: background-color 0.3s ease;
 }
 
 .experience h2 {
   font-size: 2.25rem;
   margin-bottom: 1.25rem;
   text-align: center;
+  color: var(--text-color);
 }
 
 .experience-grid {
@@ -193,9 +279,11 @@ header nav ul li a {
   justify-content: center;
   text-align: center;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px var(--shadow-color);
   padding: 1rem;
-  background-color: #f0f0f0;
+  background-color: var(--experience-card-bg);
+  color: var(--text-color);
+  transition: background-color 0.3s ease;
 }
 
 .experience-image {
@@ -211,6 +299,7 @@ header nav ul li a {
 .experience-card h4 {
   margin-bottom: 1rem;
   font-weight: 600;
+  color: var(--text-secondary-color);
 }
 
 .experience-card p {
@@ -218,8 +307,8 @@ header nav ul li a {
 }
 
 .experience-card a {
-  background-color: #007bff;
-  color: white;
+  background-color: var(--link-color);
+  color: var(--bg-color);
   padding: 0.5rem 1rem;
   text-decoration: none;
   border-radius: 4px;
@@ -239,25 +328,27 @@ header nav ul li a {
 }
 
 .technology-button {
-  border: 2px solid #007bff;
+  border: 2px solid var(--tech-button-border);
   border-radius: 6px;
   padding: 0.25rem 0.5rem;
-  background-color: white;
-  color: #007bff;
+  background-color: var(--tech-button-bg);
+  color: var(--tech-button-text);
   font-size: 0.9rem;
 }
+
 .projects {
   padding: 4rem 2rem;
-  background-color: #fff;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease;
 }
 
 .projects h2 {
   font-size: 2.25rem;
   margin-bottom: 1.25rem;
   text-align: center;
-  color: #24292e;
+  color: var(--text-color);
   font-weight: 600;
-  border-bottom: 2px solid #e1e4e8;
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.5rem;
 }
 
@@ -269,12 +360,12 @@ header nav ul li a {
 }
 
 .project-card {
-  background-color: #bbdefb;
+  background-color: var(--card-bg-color);
   padding: 2rem;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(27, 31, 35, 0.1);
-  border: 1px solid #64b5f6;
-  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 2px 6px var(--shadow-color);
+  border: 1px solid var(--card-border-color);
+  transition: transform 0.2s ease-in-out, background-color 0.3s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
 }
@@ -294,18 +385,18 @@ header nav ul li a {
 .project-card h3 {
   margin-top: 0;
   margin-bottom: 0.75rem;
-  color: #1565c0;
+  color: var(--card-title-color);
   font-size: 1.5rem;
   font-weight: 600;
 }
 
 .project-card p {
   margin-bottom: 1.25rem;
-  color: #1e88e5;
+  color: var(--card-text-color);
 }
 
 .project-card a {
-  color: #0366d6;
+  color: var(--link-color);
   text-decoration: none;
   font-weight: 500;
 }
@@ -316,27 +407,36 @@ header nav ul li a {
 
 .contact {
   padding: 4rem 2rem;
-  background-color: #f6f8fa;
+  background-color: var(--bg-secondary-color);
   text-align: center;
+  transition: background-color 0.3s ease;
 }
 
 .contact h2 {
   font-size: 2.25rem;
   margin-bottom: 1.25rem;
-  color: #24292e;
+  color: var(--text-color);
   font-weight: 600;
-  border-bottom: 2px solid #e1e4e8;
+  border-bottom: 2px solid var(--border-color);
   padding-bottom: 0.5rem;
 }
 
+/* Make contact icons visible in dark mode */
+.dark .contact-icons img {
+  filter: invert(100%) brightness(2);
+}
+
+
 footer {
-  background-color: #24292e;
-  color: #fff;
+  background-color: var(--header-bg-color);
+  color: var(--header-text-color);
   text-align: center;
   padding: 1.5rem;
   font-size: 0.9rem;
+  transition: background-color 0.3s ease;
 }
 
+/* ... (keep existing media queries) ... */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
