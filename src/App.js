@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css'; // Import the CSS for this component
 
 // Add theme and toggleTheme props to the Header component
@@ -276,14 +276,16 @@ function App() {
   }, []);
 
   return (
-    <div className="app">
-      <Header />
-      <Hero />
-      <About />
-      <Skills />
-      <Experience />
-      <Projects />
-      <Contact />
+    <div className={`app ${theme}`}>
+      <Header theme={theme} toggleTheme={toggleTheme} />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Contact />
+      </main>
       <Footer />
     </div>
   );
