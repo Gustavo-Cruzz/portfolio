@@ -87,7 +87,7 @@ const Experience = () => {
         "Developed a methodology to identify bias and unfairness in AI classification systems and mitigate their harm when dealing with sensitive attributes",
       // imageUrl: "images/experience/tech-solutions.png", 
       // link: "https://dataanalytics.example.com", 
-      technologies: ["Python", "Tensorflow", "Torch", "MySQL"],
+      technologies: ["Tensorflow", "PyTorch", "MySQL"],
     },
     {
       company: "Senai CIMATEC",
@@ -98,7 +98,7 @@ const Experience = () => {
         "Developed a pipeline to prepare and evaluate LLMs using real world data combined with Fine-Tuning, RAG and Quantization",
       // imageUrl: "images/experience/data-analytics.png", 
       // link: "https://dataanalytics.example.com", 
-      technologies: ["Python", "SQL", "HuggingFace", "Docker", "MLFlow"],
+      technologies: ["SQL", "HuggingFace", "Docker", "MLFlow"],
     },
     {
       company: "Senai CIMATEC",
@@ -109,7 +109,7 @@ const Experience = () => {
         "Developed a Multi-model application to chat with a user while generating images",
       // imageUrl: "images/experience/data-analytics.png", 
       // link: "https://dataanalytics.example.com", 
-      technologies: ["Python", "HuggingFace", "StableDiffusion", "Docker"],
+      technologies: ["HuggingFace", "StableDiffusion", "Docker"],
     },
     {
       company: "Senai CIMATEC",
@@ -117,10 +117,10 @@ const Experience = () => {
       startDate: "Apr 2025",
       endDate: "Present",
       description:
-        "Starts soon",
+        "Working with NLU models for Intent Recognition on distributed systems",
       // imageUrl: "images/experience/data-analytics.png", 
       // link: "https://dataanalytics.example.com", 
-      technologies: ["Python", "SQL", "Pandas", "Matplotlib"],
+      technologies: ["SQL", "Pandas", "Docker", "APIs"],
     },
   
   ];
